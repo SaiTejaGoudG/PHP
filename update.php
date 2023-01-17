@@ -17,7 +17,7 @@
         <form method="post">
             <div class="form-group">
                 <label >First Name</label>
-                <input type="text" autocomplete="off" name="firstname" class="form-control" placeholder="Enter your First Name" 
+                <input type="text" autocomplete="off" name="firstname" class="form-control" placeholder="Enter your First Name" required
                 value="<?php echo $firstname;?>" >
                 <span>
                     <?php if(isset($_GET["firstnameErr"])) { ?>
@@ -27,7 +27,7 @@
             </div>
             <div class="form-group">
                 <label >Last Name</label>
-                <input type="text" autocomplete="off" name="lastname" class="form-control" placeholder="Enter your Last Name"
+                <input type="text" autocomplete="off" name="lastname" class="form-control" placeholder="Enter your Last Name" required
                 value="<?php echo $lastname;?>" >
                 <span>
                     <?php if(isset($_GET["lastnameErr"])) { ?>
@@ -37,7 +37,7 @@
             </div>
             <div class="form-group">
                 <label >Contact</label>
-                <input type="text" autocomplete="off" name="contact" class="form-control" placeholder="Enter your Number"
+                <input type="text" autocomplete="off" name="contact" class="form-control" placeholder="Enter your Number" required
                 value="<?php echo $contact;?>" >
                 <span>
                     <?php if(isset($_GET["contactErr"])) { ?>
@@ -47,7 +47,7 @@
             </div>
             <div class="form-group">
                 <label >Email</label>
-                <input type="text" autocomplete="off" name="email" class="form-control" placeholder="Enter your Email"
+                <input type="text" autocomplete="off" name="email" class="form-control" placeholder="Enter your Email" required
                 value="<?php echo $email;?>" >
                 <span>
                     <?php if(isset($_GET["emailErr"])) { ?>
@@ -57,7 +57,7 @@
             </div>
             <div class="form-group">
                 <label >Address</label>
-                <input type="text" autocomplete="off" name="address" class="form-control" placeholder="Enter your Address"
+                <input type="text" autocomplete="off" name="address" class="form-control" placeholder="Enter your Address" required
                 value="<?php echo $address;?>" >
                 <span>
                     <?php if(isset($_GET["addressErr"])) { ?>

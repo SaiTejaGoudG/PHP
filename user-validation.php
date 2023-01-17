@@ -64,7 +64,7 @@ if (isset($_POST['firstname']) &&
         if (empty($_POST["address"])) {
             header('location: user.php?addressErr=Required');
             exit();
-        } else if (!preg_match("/^[a-zA-Z0-9\s,'-]*\d+[a-zA-Z0-9\s,'-]*$/",$_POST["address"])) {
+        } else if (!preg_match("/^[a-zA-Z0-9\s,'-, #]*\d+[a-zA-Z0-9\s,'-]*$/",$_POST["address"])) {
             header('location: user.php?addressErr=Enter a valid Address');
             exit();
         } else {

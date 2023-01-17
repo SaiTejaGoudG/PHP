@@ -18,23 +18,22 @@
           <label>Name</label>
           <input type="text" 
                     name="name" 
-                    placeholder="Name"><br>
-
+                    placeholder="Name" required><br>
 
           <label>User Email</label>
           <input type="text"
                     name="userEmail" 
-                    placeholder="User Email"><br>
+                    placeholder="User Email" required><br>
 
      	<label>Password</label>
      	<input type="password" 
                  name="password" 
-                 placeholder="Password"><br>
+                 placeholder="Password" required><br>
 
           <label>Confirm Password</label>
           <input type="password" 
                  name="re_password" 
-                 placeholder="Re_Password"><br>
+                 placeholder="Re_Password" required><br>
           
      	<button type="submit">Sign Up</button>
           <a href="index.php" class="ca">Already have an account?</a>
