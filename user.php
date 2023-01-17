@@ -21,7 +21,7 @@
                 <input type="text" autocomplete="off" name="firstname" class="form-control" placeholder="Enter your First Name" required>
                 <span>
                     <?php if(isset($_GET["firstnameErr"])) { ?>
-                            <p class="error"> <?php echo $_GET["firstnameErr"]; ?></p>
+                            <p class="error"> <?php echo $_POST["firstnameErr"]; ?></p>
                        <?php }?>
                 </span>
             </div>
@@ -30,7 +30,7 @@
                 <input type="text" autocomplete="off" name="lastname" class="form-control" placeholder="Enter your Last Name" required>
                 <span>
                     <?php if(isset($_GET["lastnameErr"])) { ?>
-                            <p class="error"> <?php echo $_GET["lastnameErr"]; ?></p>
+                            <p class="error"> <?php echo $_POST["lastnameErr"]; ?></p>
                        <?php }?>
                 </span>
             </div>
@@ -39,7 +39,7 @@
                 <input type="text" autocomplete="off" name="contact" class="form-control" placeholder="Enter your Number" required>
                 <span>
                     <?php if(isset($_GET["contactErr"])) { ?>
-                            <p class="error"> <?php echo $_GET["contactErr"]; ?></p>
+                            <p class="error"> <?php echo $_POST["contactErr"]; ?></p>
                        <?php }?>
                 </span>
             </div>
@@ -48,7 +48,7 @@
                 <input type="text" autocomplete="off" name="email" class="form-control" placeholder="Enter your Email" required>
                 <span>
                     <?php if(isset($_GET["emailErr"])) { ?>
-                            <p class="error"> <?php echo $_GET["emailErr"]; ?></p>
+                            <p class="error"> <?php echo $_POST["emailErr"]; ?></p>
                        <?php }?>
                 </span>
             </div>
@@ -57,7 +57,7 @@
                 <input type="text" autocomplete="off" name="address" class="form-control" placeholder="Enter your Address" required>
                 <span>
                     <?php if(isset($_GET["addressErr"])) { ?>
-                            <p class="error"> <?php echo $_GET["addressErr"]; ?></p>
+                            <p class="error"> <?php echo $_POST["addressErr"]; ?></p>
                        <?php }?>
                 </span>
             </div>

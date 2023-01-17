@@ -78,8 +78,8 @@
             if (empty($_POST["address"])) {
                 header('location: update.php?addressErr=Required');
                 exit();
-            } else if (!preg_match("/^[a-zA-Z0-9\s,'-]*\d+[a-zA-Z0-9\s,'-]*$/",$_POST["address"])) {
-                header('location: update.php?addressErr=Enter a valid Address');
+            } else if (!preg_match("/^[a-zA-Z0-9\s,'-,#]*\d+[a-zA-Z0-9\s,'-]*$/",$_POST["address"])) {
+                header('location: update.php?updateid='.$id.'&addressErr=Enter a valid Address');
                 exit();
             } else {
                 $address = test_input($_POST["address"]);
