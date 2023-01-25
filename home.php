@@ -8,12 +8,16 @@ include 'connect.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crud Operations</title>
+    <title>Home Page</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" >
 </head>
 <body>
-
+    <div class="bg-dark py-3 ">
+        <div class="container d-flex justify-content-center">
+            <div class="text-white h4">PHP CRUD APPLICATION</div>
+        </div>
+    </div>
     <div class="container ">
     <?php
         if(isset($_GET['msg'])) {
@@ -26,57 +30,61 @@ include 'connect.php';
           </div>';
         }
         ?>  
-        
-        <div class="mt-5 mb-5 d-flex justift-content-center">
-            <button class="btn btn-success mx-auto ">
-                <a class="text-light mt-5" href="user.php">Add Student</a>
-            </button>
-        </div>      
-        <table class="table table-hover table-center mt-1" >
-        <thead class="thead-dark ">
-            <tr>
-            <th scope="col">ID</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Contact</th>
-            <th scope="col">Email</th>
-            <th scope="col">Address</th>
-            <th scope="col">Edit</th>
-            <th scope="col">Delete</th>
-            </tr>
-        </thead>
-        <tbody>
-             <?php
-             $sql = "SELECT * FROM  `users`";
-             $result = mysqli_query($conn, $sql);
-             if($result) {
-                while($row = mysqli_fetch_assoc($result)) {
-                    $id = $row['id'];
-                    $firstname = $row['firstname'];
-                    $lastname = $row['lastname'];
-                    $contact = $row['contact'];
-                    $email = $row['email'];
-                    $address = $row['address'];
-                    echo '<tr>
-                    <th scope="row">'.$id.'</th>
-                    <th>'.$firstname.'</th>
-                    <td>'.$lastname.'</td>
-                    <td>'.$contact.'</td>
-                    <td>'.$email.'</td>
-                    <td>'.$address.'</td>
-                    <td>
-                    <button class="btn btn-primary ">
-                    <a class="text-light" href="update.php?updateid='.$id.'">Update</a></button>
-                    </td>
-                    <td>
-                    <button class="btn btn-danger">
-                    <a class="text-light" href="delete.php?deleteid='.$id.'">Delete</a></button></td>
-                    </tr>';
+        <div class="container">
+            <div class="d-flex justify-content-between  mt-5 mb-5">
+                <div>
+                    <a class="h4 btn btn-success text-light" href="user.php">Add Student</a>
+                </div>
+                <div>
+                    <a href="index.php" class="btn btn-primary">LogOut</a>
+                </div>
+            </div>
+            <table class="table table-hover table-center mt-1" >
+            <thead class="thead-dark ">
+                <tr>
+                <th scope="col">ID</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Contact</th>
+                <th scope="col">Email</th>
+                <th scope="col">Address</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $sql = "SELECT * FROM  `users`";
+                $result = mysqli_query($conn, $sql);
+                if($result) {
+                    while($row = mysqli_fetch_assoc($result)) {
+                        $id = $row['id'];
+                        $firstname = $row['firstname'];
+                        $lastname = $row['lastname'];
+                        $contact = $row['contact'];
+                        $email = $row['email'];
+                        $address = $row['address'];
+                        echo '<tr>
+                        <th scope="row">'.$id.'</th>
+                        <th>'.$firstname.'</th>
+                        <td>'.$lastname.'</td>
+                        <td>'.$contact.'</td>
+                        <td>'.$email.'</td>
+                        <td>'.$address.'</td>
+                        <td>
+                        <button class="btn btn-primary ">
+                        <a class="text-light" href="update.php?updateid='.$id.'">Update</a></button>
+                        </td>
+                        <td>
+                        <button class="btn btn-danger">
+                        <a class="text-light" href="delete.php?deleteid='.$id.'">Delete</a></button></td>
+                        </tr>';
+                    }
                 }
-             }
-             ?>
-        </tbody>
-    </table>
+                ?>
+            </tbody>
+        </table>
+        </div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
